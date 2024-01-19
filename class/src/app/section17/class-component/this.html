@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this의 이해</title>
+    <script>
+        class ClassCounterPage {
+            count = 10;
+
+            onClickCountUp() {
+                console.log("현재 카운트: ", this.count);
+            }
+
+            render() {
+                const button = document.createElement("button");
+                button.innerText = "카운트 올리기";
+                button.addEventListener("click", this.onClickCountUp.bind(this));
+                document.body.appendChild(button);
+            }
+        }
+
+        window.onload = () => {
+            const counter = new ClassCounterPage();
+            counter.render();
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
