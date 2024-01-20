@@ -5,12 +5,12 @@ export class Board extends BaseEntity {
     @PrimaryGeneratedColumn("increment")
     number!: number
 
-    @Column()
+    @Column({type: "text"})
     writer!: string
 
-    @Column()
+    @Column({type: "text"})
     title!: string
 
-    @Column()
+    @Column({type: "text"})
     contents!: string
 }
