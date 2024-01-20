@@ -11,7 +11,7 @@ const UPLOAD_FILE = gql`
   }
 `;
 
-export default function ImageRefPage() {
+export default function ImageValidationPage() {
   const [uploadFile] = useMutation(UPLOAD_FILE);
   const fileRef = useRef<HTMLInputElement>(null);
   const [imageUrl, setImageUrl] = useState<string>("");
