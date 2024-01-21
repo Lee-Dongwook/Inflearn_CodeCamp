@@ -59,8 +59,8 @@ const resolvers = {
 
         deleteBoard: async() => {
             await Board.delete({ number: 3 })
-            await Board.update({ number: 3 }, { isDeleted: true });
-            await Board.update({ number: 3 }, { deletedAt: new Date() })
+            // await Board.update({ number: 3 }, { isDeleted: true });
+            // await Board.update({ number: 3 }, { deletedAt: new Date() })
         }
     }
 }
